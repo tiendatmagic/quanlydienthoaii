@@ -20,14 +20,14 @@ namespace quanlydienthoai
         private void LoadDataGridView()
         {
             string sql;
-            sql = "SELECT * FROM Sach";
+            sql = "SELECT * FROM DIENTHOAI";
             tblCL = Functions.GetDataToTable(sql); //Đọc dữ liệu từ bảng
             dataGridView1.DataSource = tblCL; //Nguồn dữ liệu            
-            dataGridView1.Columns[0].HeaderText = "Mã sách";
-            dataGridView1.Columns[1].HeaderText = "Tên sách";
-            dataGridView1.Columns[2].HeaderText = "Số lượng";
-            dataGridView1.Columns[3].HeaderText = "Đơn giá";
-            dataGridView1.Columns[4].HeaderText = "Mã nhà xuất bản";
+            dataGridView1.Columns[0].HeaderText = "Mã điện thoại";
+            dataGridView1.Columns[1].HeaderText = "Tên điện thoại";
+            dataGridView1.Columns[2].HeaderText = "Đơn giá";
+            dataGridView1.Columns[3].HeaderText = "Tồn kho";
+            dataGridView1.Columns[4].HeaderText = "Mã hàng";
             dataGridView1.Columns[0].Width = 100;
             dataGridView1.Columns[1].Width = 100;
             dataGridView1.Columns[2].Width = 100;
@@ -41,7 +41,9 @@ namespace quanlydienthoai
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Functions.Connect();
+            LoadDataGridView();
+            //Load_Treeview();
         }
 
         private void button1_Click(object sender, EventArgs e)
