@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 
-namespace Quanlybanhang.Class
+namespace quanlydienthoai.Class
 {
     class Functions
     {
