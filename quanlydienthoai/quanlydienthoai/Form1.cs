@@ -51,10 +51,7 @@ namespace quanlydienthoai
             comboBox1.DisplayMember = "tenhang";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnxem_Click(object sender, EventArgs e)
         {
@@ -85,6 +82,41 @@ namespace quanlydienthoai
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDataGridView2();
+        }
+
+        private void btncapnhat_Click(object sender, EventArgs e)
+        {
+            string sql; //Lưu câu lệnh sql
+            if (tblCL.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtgia.Text == "") //nếu chưa chọn bản ghi nào
+            {
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtsoluong.Text.Trim().Length == 0) //nếu chưa nhập tên chất liệu
+            {
+                MessageBox.Show("Bạn chưa nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            sql = "UPDATE DIENTHOAI SET dongia=N'" + txtgia.Text.ToString() + "',N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'";
+          //sql = "UPDATE DIENTHOAI SET dongia=N'" + txtgia.Text.ToString() + "',N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'";
+            //N'" +  textBox1.Text + "',N'" + textBox2.Text + "'," +  textBox3.Text + "," + textBox4.Text + ",'" + textBox5.Text + "'
+            //N'" + textBox1.Text.Trim() + "'"
+//update DIENTHOAI set dongia='2000',tonkho='1' where ma='M01' 
+    /*
+     sql = "UPDATE tblChatlieu SET Tenchatlieu=N'" +
+                txtsoluong.Text.ToString() +
+                "' WHERE Machatlieu=N'" + txtgia.Text + "'";
+     */
+            Class.Functions.RunSQL(sql);
+            LoadDataGridView();
+           // ResetValue();
+
+            //btnBoqua.Enabled = false;
         }
     }
 }
