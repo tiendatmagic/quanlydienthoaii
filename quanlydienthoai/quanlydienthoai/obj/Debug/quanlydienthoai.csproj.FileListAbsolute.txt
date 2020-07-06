@@ -7,3 +7,4 @@ D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\bin\Debug\q
 D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\bin\Debug\quanlydienthoai.pdb
 D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.exe
 D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.pdb
+D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.Form1.resources

@@ -44,6 +44,11 @@ namespace quanlydienthoai
             Functions.Connect();
             LoadDataGridView();
             //Load_Treeview();
+
+            string sql;
+            sql = "SELECT tenhang FROM HANGSX";
+            comboBox1.DataSource = Functions.GetDataToTable(sql);
+            comboBox1.DisplayMember = "tenhang";
         }
 
         private void button1_Click(object sender, EventArgs e)
