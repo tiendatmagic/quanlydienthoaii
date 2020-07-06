@@ -1,1 +1,2 @@
 C:\Users\Administrator\AppData\Local\Temporary Projects\quanlydienthoai\bin\Debug\quanlydienthoai.exe.config
+D:\quanlydienthoaii\quanlydienthoai\quanlydienthoai\bin\Debug\quanlydienthoai.exe.config
