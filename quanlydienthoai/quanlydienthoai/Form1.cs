@@ -102,10 +102,10 @@ namespace quanlydienthoai
                 MessageBox.Show("Bạn chưa nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            sql = "UPDATE DIENTHOAI SET dongia=N'" + txtgia.Text.ToString() + "',N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'";
-          //sql = "UPDATE DIENTHOAI SET dongia=N'" + txtgia.Text.ToString() + "',N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'";
-            //N'" +  textBox1.Text + "',N'" + textBox2.Text + "'," +  textBox3.Text + "," + textBox4.Text + ",'" + textBox5.Text + "'
-            //N'" + textBox1.Text.Trim() + "'"
+
+            sql = ("UPDATE DIENTHOAI SET dongia=N'" + txtgia.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'" +
+             "UPDATE DIENTHOAI SET tonkho=N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'");
+            
 //update DIENTHOAI set dongia='2000',tonkho='1' where ma='M01' 
     /*
      sql = "UPDATE tblChatlieu SET Tenchatlieu=N'" +
