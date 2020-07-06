@@ -55,5 +55,36 @@ namespace quanlydienthoai
         {
 
         }
+
+        private void btnxem_Click(object sender, EventArgs e)
+        {
+            LoadDataGridView2();
+        }
+
+        private void LoadDataGridView2()
+        {
+            string sql;
+            sql = "select DIENTHOAI.ma, DIENTHOAI.ten, DIENTHOAI.dongia, DIENTHOAI.tonkho, DIENTHOAI.mahang from DIENTHOAI,HANGSX where DIENTHOAI.mahang = HANGSX.mahang and HANGSX.tenhang=" + "'" + comboBox1.Text + "'";
+            tblCL = Functions.GetDataToTable(sql); //Đọc dữ liệu từ bảng
+            dataGridView1.DataSource = tblCL; //Nguồn dữ liệu            
+            dataGridView1.Columns[0].HeaderText = "Mã điện thoại";
+            dataGridView1.Columns[1].HeaderText = "Tên điện thoại";
+            dataGridView1.Columns[2].HeaderText = "Đơn giá";
+            dataGridView1.Columns[3].HeaderText = "Tồn kho";
+            dataGridView1.Columns[4].HeaderText = "Mã hàng";
+            dataGridView1.Columns[0].Width = 100;
+            dataGridView1.Columns[1].Width = 100;
+            dataGridView1.Columns[2].Width = 100;
+            dataGridView1.Columns[3].Width = 100;
+            dataGridView1.Columns[4].Width = 100;
+
+            dataGridView1.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically; //Không cho sửa dữ liệu trực tiếp}
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDataGridView2();
+        }
     }
 }

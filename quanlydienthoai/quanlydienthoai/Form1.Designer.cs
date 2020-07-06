@@ -62,6 +62,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(303, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -165,6 +166,7 @@
             this.btnxem.TabIndex = 5;
             this.btnxem.Text = "Xem";
             this.btnxem.UseVisualStyleBackColor = true;
+            this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
             // 
             // Form1
             // 
