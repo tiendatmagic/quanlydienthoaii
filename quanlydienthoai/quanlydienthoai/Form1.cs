@@ -12,6 +12,7 @@ namespace quanlydienthoai
 {
     public partial class Form1 : Form
     {
+        int cndl = 0;
         public Form1()
         {
             InitializeComponent();
@@ -86,37 +87,75 @@ namespace quanlydienthoai
 
         private void btncapnhat_Click(object sender, EventArgs e)
         {
+            if (cndl == 0)
+            {
+                MessageBox.Show("Chưa tích cập nhật giá");
+            }
+
+            else
+            {
+                string sql; //Lưu câu lệnh sql
+                if (tblCL.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (txtgia.Text == "") //nếu chưa chọn bản ghi nào
+                {
+                    MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (txtsoluong.Text.Trim().Length == 0) //nếu chưa nhập tên chất liệu
+                {
+                    MessageBox.Show("Bạn chưa nhập hết thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                sql = ("UPDATE DIENTHOAI SET dongia=N'" + txtgia.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'" +
+                 "UPDATE DIENTHOAI SET tonkho=N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'");
+
+                //update DIENTHOAI set dongia='2000',tonkho='1' where ma='M01' 
+                /*
+                 sql = "UPDATE tblChatlieu SET Tenchatlieu=N'" +
+                            txtsoluong.Text.ToString() +
+                            "' WHERE Machatlieu=N'" + txtgia.Text + "'";
+                 */
+                Class.Functions.RunSQL(sql);
+                LoadDataGridView();
+                // ResetValue();
+
+                //btnBoqua.Enabled = false;
+            }
+            
+        }
+
+        private void btnxoa_Click(object sender, EventArgs e)
+        {
             string sql; //Lưu câu lệnh sql
             if (tblCL.Rows.Count == 0)
             {
                 MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txtgia.Text == "") //nếu chưa chọn bản ghi nào
-            {
-                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if (txtsoluong.Text.Trim().Length == 0) //nếu chưa nhập tên chất liệu
-            {
-                MessageBox.Show("Bạn chưa nhập tên chất liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
 
-            sql = ("UPDATE DIENTHOAI SET dongia=N'" + txtgia.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'" +
-             "UPDATE DIENTHOAI SET tonkho=N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'");
-            
-//update DIENTHOAI set dongia='2000',tonkho='1' where ma='M01' 
-    /*
-     sql = "UPDATE tblChatlieu SET Tenchatlieu=N'" +
-                txtsoluong.Text.ToString() +
-                "' WHERE Machatlieu=N'" + txtgia.Text + "'";
-     */
-            Class.Functions.RunSQL(sql);
-            LoadDataGridView();
-           // ResetValue();
+            if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                sql = "DELETE DIENTHOAI WHERE ma=N'" + txtma.Text + "'";
+                Class.Functions.RunSqlDel(sql);
+                LoadDataGridView();
+                //ResetValue();
+            }
+        }
 
-            //btnBoqua.Enabled = false;
+        private void ch_cn_Click(object sender, EventArgs e)
+        {
+            if (ch_cn.Checked == true)
+
+                cndl = 1;
+
+            if (ch_cn.Checked == false)
+
+                cndl = 0;
         }
     }
 }

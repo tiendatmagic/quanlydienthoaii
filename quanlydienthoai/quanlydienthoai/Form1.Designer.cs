@@ -35,7 +35,7 @@
             this.txtsoluong = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btncapnhat = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ch_cn = new System.Windows.Forms.CheckBox();
             this.txtgia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -81,7 +81,7 @@
             this.groupBox1.Controls.Add(this.txtsoluong);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btncapnhat);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.ch_cn);
             this.groupBox1.Controls.Add(this.txtgia);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 306);
@@ -117,15 +117,16 @@
             this.btncapnhat.UseVisualStyleBackColor = true;
             this.btncapnhat.Click += new System.EventHandler(this.btncapnhat_Click);
             // 
-            // checkBox1
+            // ch_cn
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(398, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Cập nhật giá";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ch_cn.AutoSize = true;
+            this.ch_cn.Location = new System.Drawing.Point(398, 19);
+            this.ch_cn.Name = "ch_cn";
+            this.ch_cn.Size = new System.Drawing.Size(86, 17);
+            this.ch_cn.TabIndex = 2;
+            this.ch_cn.Text = "Cập nhật giá";
+            this.ch_cn.UseVisualStyleBackColor = true;
+            this.ch_cn.Click += new System.EventHandler(this.ch_cn_Click);
             // 
             // txtgia
             // 
@@ -161,6 +162,7 @@
             this.btnxoa.TabIndex = 0;
             this.btnxoa.Text = "Xóa dòng điện thoại";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnxem
             // 
@@ -218,7 +220,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btncapnhat;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ch_cn;
         private System.Windows.Forms.TextBox txtgia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtsoluong;
