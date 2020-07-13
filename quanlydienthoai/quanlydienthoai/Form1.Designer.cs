@@ -32,6 +32,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtsoluong = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btncapnhat = new System.Windows.Forms.Button();
@@ -41,8 +42,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnxem = new System.Windows.Forms.Button();
-            this.txtma = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,10 +72,10 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(499, 236);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtma);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtsoluong);
             this.groupBox1.Controls.Add(this.label3);
@@ -90,6 +89,15 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cập nhật giá và kho";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(52, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Mã:";
             // 
             // txtsoluong
             // 
@@ -174,22 +182,6 @@
             this.btnxem.UseVisualStyleBackColor = true;
             this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
             // 
-            // txtma
-            // 
-            this.txtma.Location = new System.Drawing.Point(115, 19);
-            this.txtma.Name = "txtma";
-            this.txtma.Size = new System.Drawing.Size(166, 20);
-            this.txtma.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Mã:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,7 +194,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Quản lý điện thoại";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -228,7 +220,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btnxem;
-        private System.Windows.Forms.TextBox txtma;
         private System.Windows.Forms.Label label4;
     }
 }

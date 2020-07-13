@@ -8,3 +8,10 @@ D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\bin\Debug\q
 D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.exe
 D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.pdb
 D:\quanlydienthoaii\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.Form1.resources
+D:\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.exe
+D:\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.pdb
+D:\quanlydienthoaii\quanlydienthoai\quanlydienthoai\bin\Debug\quanlydienthoai.exe
+D:\quanlydienthoaii\quanlydienthoai\quanlydienthoai\bin\Debug\quanlydienthoai.pdb
+D:\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.Form1.resources
+D:\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.Properties.Resources.resources
+D:\quanlydienthoaii\quanlydienthoai\quanlydienthoai\obj\Debug\quanlydienthoai.csproj.GenerateResource.Cache

@@ -1,6 +1,6 @@
-create database quanlydienthoai
+create database quanlydienthoaii
 
-use quanlydienthoai
+use quanlydienthoaii
 
 create table HANGSX(
 mahang char(10),

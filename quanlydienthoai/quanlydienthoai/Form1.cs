@@ -111,8 +111,14 @@ namespace quanlydienthoai
                     return;
                 }
 
+                /*
                 sql = ("UPDATE DIENTHOAI SET dongia=N'" + txtgia.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'" +
                  "UPDATE DIENTHOAI SET tonkho=N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + txtma.Text + "'");
+                */
+
+                sql = ("UPDATE DienThoai SET DonGia=N'" + txtgia.Text.ToString() + "' WHERE ma=N'" + dataGridView1.CurrentRow.Cells["ma"].Value.ToString() + "'" +
+                   "UPDATE DienThoai SET tonkho=N'" + txtsoluong.Text.ToString() + "' WHERE ma=N'" + dataGridView1.CurrentRow.Cells["ma"].Value.ToString() + "'");
+
 
                 //update DIENTHOAI set dongia='2000',tonkho='1' where ma='M01' 
                 /*
@@ -139,11 +145,13 @@ namespace quanlydienthoai
             }
 
             if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                sql = "DELETE DIENTHOAI WHERE ma=N'" + txtma.Text + "'";
+            {sql = "DELETE DienThoai WHERE ma=N'" + dataGridView1.CurrentRow.Cells["ma"].Value.ToString() + "'";
                 Class.Functions.RunSqlDel(sql);
+                
+                //ResetValue();
                 LoadDataGridView();
                 //ResetValue();
+              
             }
         }
 
@@ -156,6 +164,23 @@ namespace quanlydienthoai
             if (ch_cn.Checked == false)
 
                 cndl = 0;
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            if (tblCL.Rows.Count == 0) //Nếu không có dữ liệu
+            {
+                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            btncapnhat.Enabled = true;
+            txtgia.Enabled = true;
+            txtsoluong.Enabled = true;
+            btnxoa.Enabled = true;
+            ch_cn.Checked = false;
+            txtgia.Text = dataGridView1.CurrentRow.Cells["DonGia"].Value.ToString();
+            txtsoluong.Text = dataGridView1.CurrentRow.Cells["TonKho"].Value.ToString();
         }
     }
 }
