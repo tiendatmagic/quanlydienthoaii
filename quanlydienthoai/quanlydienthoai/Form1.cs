@@ -77,7 +77,9 @@ namespace quanlydienthoai
             dataGridView1.Columns[4].Width = 100;
 
             dataGridView1.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp
-            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically; //Không cho sửa dữ liệu trực tiếp}
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically; //Không cho sửa dữ liệu trực tiếp
+            
+        
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

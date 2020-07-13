@@ -42,6 +42,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnxem = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,6 +77,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtsoluong);
             this.groupBox1.Controls.Add(this.label3);
@@ -95,9 +97,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(52, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Mã:";
+            this.label4.Text = "_";
             // 
             // txtsoluong
             // 
@@ -182,6 +184,14 @@
             this.btnxem.UseVisualStyleBackColor = true;
             this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(227, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +231,7 @@
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btnxem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
